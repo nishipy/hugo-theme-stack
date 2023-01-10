@@ -54,6 +54,10 @@
                     </a>
                 </li>
             {{ end }}
+            <li id="dark-mode-toggle">
+                {{ partial "helper/icon" "sun" }}
+                {{ partial "helper/icon" "moon" }}
+            </li>
         </ol>
     {{- end -}}
 
@@ -88,13 +92,12 @@
                 </li>
             {{ end }}
             
-            {{ if (default false .Site.Params.colorScheme.toggle) }}
+            <!-- {{ if (default false .Site.Params.colorScheme.toggle) }}
                 <li id="dark-mode-toggle">
-                    {{ partial "helper/icon" "toggle-left" }}
-                    {{ partial "helper/icon" "toggle-right" }}
-                    <span>{{ T "darkMode" }}</span>
+                    {{ partial "helper/icon" "sun" }}
+                    {{ partial "helper/icon" "moon" }}
                 </li>
-            {{ end }}
+            {{ end }} -->
         </div>
     </ol>
 </aside>
